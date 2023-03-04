@@ -7,7 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" 
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-</head>
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.1.0/classic/ckeditor.js"></script>
+  </head>
 <body>
 @if($errors->any())
   <ul>
@@ -27,11 +28,20 @@
     <input type="title" class="form-control" name="title"
     id="title" aria-describedby="title" value="{{old('title')}}">
     </div>
-  <div class="form-group">
+    <!--ck editor-->
+    <div class="form-group">
+      <label for="description">description</label>
+      <textarea type="text" class="form-control" id="description" placeholder="Enter description"
+          name="description" value="{{old('description')}}"></textarea>
+  </div>
+
+
+
+  <!--<div class="form-group">
     <label for="description">description</label>
     <input type="description" class="form-control" id="description" name="description"
      aria-describedby="description" value="{{old('description')}}">
-  </div>
+  </div>-->
   
   <div class="form-group">
     <label for="image">image</label>
@@ -50,6 +60,13 @@
 
   <button type="submit" class="btn btn-primary">Submit</button>
 
+  <!--cd editor-->
+<script>
+  ClassicEditor
+  .create(document.querySelector('#description'))
+  .catch(error=>{
+    console.error(error);
+  })</script>
 </form></div>
 
  </div>

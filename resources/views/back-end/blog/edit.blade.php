@@ -8,7 +8,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-</head>
+        <script src="https://cdn.ckeditor.com/ckeditor5/35.1.0/classic/ckeditor.js"></script>
+    </head>
+    </head>
 
 <body>
     <div class="container">
@@ -20,17 +22,25 @@
                 <input type="title" class="form-control" name="title" id="title" aria-describedby="title"
                     value="{{ $data->title }}">
             </div>
+
+
             <div class="form-group">
                 <label for="description">description</label>
-                <input type="description" class="form-control" id="description" name="description"
-                    aria-describedby="description" value="{{ $data->description }}">
+                <textarea type="text" class="form-control" id="description" placeholder="Enter description"
+                    name="description" value="{{old('description')}}"></textarea>
             </div>
+                   
+           <!-- <div class="form-group">
+                <label for="description">description</label>
+                <input type="description" class="form-control" id="description" name="description"
+                    aria-describedby="description" value="{{ $data->description}}">
+            </div>-->
 
-            <!--<div class="form-group">
+            <div class="form-group">
     <label for="image">image</label>
     <input type="file" aria-describedby="image"  class="form-control"
     id="image" name="image" value="{{ $data->image }}">
-  </div>-->
+  </div>
 
             <!--dropdown-->
             <div class="mb-3 col-md-6">
@@ -45,11 +55,7 @@
 
             </div>
 
-
-
-
-
-            <!--or code of dropdown-->
+<!--or code of dropdown-->
             <!--<div class="form-group">
                 <label for="exampleFormControlSelect1">Example select</label>
                 <select name="category_id" id="cars">
@@ -60,6 +66,13 @@
               </div>-->
             <!--end dropdown-->
             <button type="submit" class="btn btn-primary">update</button>
+
+            <!--ckeditor--><script>
+                ClassicEditor
+                .create(document.querySelector('#description'))
+                .catch(error=>{
+                  console.error(error);
+                })</script><!--endckeditor-->
     </div>
     </form>
 </body>

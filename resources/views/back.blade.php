@@ -16,18 +16,13 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="#!">Start Bootstrap</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                 aria-expanded="false" aria-label="Toggle navigation">
-                 <span class="navbar-toggler-icon">
-                    </span></button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">
-                            Blog</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Blog</a></li>
                     </ul>
                 </div>
             </div>
@@ -44,56 +39,37 @@
         <!-- Page content-->
         <div class="container">
             <div class="row">
+            
                 <!-- Blog entries-->
                 <div class="col-lg-8">
                     <!-- Featured blog post-->
                     <div class="card mb-4">
-                        <a href="#!">
-            <img class="card-img-top" src="{{asset('uploads/'.$latest->image)}}" alt="..." /></a>
+                        <a href="#!"><img class="card-img-top" src="{{asset('uploads/'.$latest->image)}}" 
+                            width="850" height="350"alt="..." /></a>
                         <div class="card-body">
                             <div class="small text-muted">January 1, 2022</div>
                             <h2 class="card-title">{{$latest->title}}</h2>
                             <p class="card-text">{{$latest->description}}</p>
-                            <a class="btn btn-primary" href="{{route('detail',$latest->id)}}">Read more →</a>
+                            
+                            <a class="btn btn-primary" href="{{route('detail',$latest->id)}}">Read more</a>
                         </div>
                     </div>
                     <!-- Nested row for non-featured blog posts-->
                     <div class="row">
                         @foreach ($blog as $b)
-                            
-                       
                         <div class="col-lg-6">
-                           <!-- Blog post-->
+                             <!--Blog post-->
                             <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top"
-                                     src="{{asset('uploads/'.$b->image)}}" width="700px"
-                                      height="350px" alt="..." /></a>
+                                <a href="#!"><img class="card-img-top" 
+                                    src="{{asset('uploads/'.$b->image)}}" width="700px" height="200px" alt="..." /></a>
                                 <div class="card-body">
                                     <div class="small text-muted">January 1, 2022</div>
                                     <h2 class="card-title h4">{{$b->title}}</h2>
-                                    <p class="card-text">{!!$b->description!!}</p>
+                                    <p class="card-text">{{$b->description}}</p>
                                     <a class="btn btn-primary" href="{{route('detail',$b->id)}}">Read more →</a>
                                 </div>
                             </div>
-                            
-                        
-                           <!-- Blog post-->
-                           {{-- <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top"
-                                     src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
-                                <div class="card-body">
-                                    <div class="small text-muted">January 1, 2022</div>
-                                    <h2 class="card-title h4">Post Title</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet,
-                                         consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
-                                    <a class="btn btn-primary" href="#!">Read more →</a>
-                                </div>
-                            </div> --}}
-
-                        </div>
-
-                        {{-- <div class="col-lg-6">
-                            <!--Blog post-->
+                            <!-- Blog post
                             <div class="card mb-4">
                                 <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
                                 <div class="card-body">
@@ -103,7 +79,19 @@
                                     <a class="btn btn-primary" href="#!">Read more →</a>
                                 </div>
                             </div>
-                            <!--Blog post-->
+                        --> </div>
+                       <!-- <div class="col-lg-6">
+                            Blog post
+                            <div class="card mb-4">
+                                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
+                                <div class="card-body">
+                                    <div class="small text-muted">January 1, 2022</div>
+                                    <h2 class="card-title h4">Post Title</h2>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
+                                    <a class="btn btn-primary" href="#!">Read more →</a>
+                                </div>
+                            </div>
+                             Blog post
                             <div class="card mb-4">
                                 <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
                                 <div class="card-body">
@@ -113,11 +101,9 @@
                                     <a class="btn btn-primary" href="#!">Read more →</a>
                                 </div>
                             </div>
-                        </div> --}}
+                        </div>-->
                         @endforeach
-
-                    </div>
-
+                 </div>
                     <!-- Pagination-->
                     <nav aria-label="Pagination">
                         <hr class="my-0" />
@@ -149,31 +135,29 @@
                         <div class="card-header">Categories</div>
                         <div class="card-body">
                             <div class="row">
-                                @foreach($category as $d)
+                                @foreach($cate as $d)
                                 <div class="col-sm-6">
                                     <ul class="list-unstyled mb-0">
                                         <li><a href="#!">{{$d->name}}</a></li>
                                      
                                     </ul>
-                                    @endforeach
+
                                 </div>
-                                
+                                @endforeach
                             </div>
                         </div>
                     </div>
                     <!-- Side widget-->
                     <div class="card mb-4">
                         <div class="card-header">Side Widget</div>
-                        <div class="card-body">
-                            You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
+                        <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
                     </div>
                 </div>
-            </div>
+           </div>
         </div>
         <!-- Footer-->
         <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p>
-            </div>
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

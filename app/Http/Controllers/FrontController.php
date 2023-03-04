@@ -13,8 +13,8 @@ class FrontController extends Controller
  {
     $category=Category::all();
     $blog=Blog::all();
-    $latest_blog=Blog::latest()->first();
-    $des=Blog::all();
-return view('welcome',compact('category','blog','latest_blog','des'));
+    $latest=Blog::latest()->first();
+    //$des=Blog::all();
+return view('welcome',compact('category','blog','latest'));
  }
 }

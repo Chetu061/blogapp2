@@ -2,7 +2,8 @@
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\FrontController;
-
+use App\Http\Controllers\BackController;
+use App\Http\Controllers\DetailController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -38,4 +39,34 @@ Route::get('blog/delete/{id}',[BlogController::class,'delete'])->name('blog.dele
 
 //to show image and categoery on that page
 
-Route::get('/',[FrontController::class,'front'])->name('front');
+Route::get('/',[FrontController::class,'front'])->name('front');//first template
+Route::get('back',[BackController::class,'back'])->name('back');//repeat for practice
+
+Route::get('detail/{id}',[DetailController::class,'detail'])->name('detail');//second template
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

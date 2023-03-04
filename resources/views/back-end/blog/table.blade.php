@@ -36,11 +36,8 @@
       <tr>
         <td scope="row">{{$d->id}}</td>
         <td>{{$d->title}}</td>
-        <td>{{$d->description}}</td>
+        <td>{!!$d->description!!}</td>
 
-
-        
-        
          <td>
     <img
      src="{{asset('uploads/'.$d->image)}}"
@@ -48,7 +45,7 @@
    height="50px"alt=""></td>
    
    <!--category data-->
-   <td>{{$d->category->name}}</td>
+   <td>{{$d->category->name}}</td><!--[correct]$d->category->name-->
 
 
   <td>    
