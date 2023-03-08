@@ -11,6 +11,7 @@
 </head>
 <body>
   <div class="container">
+  <div class="container">
    @if(session()->has('message'))
   <div class="alert alert-success">
     {{session()->get('message')}}
@@ -20,7 +21,7 @@
 <a href="{{route('blog.create')}}">
     <button type="button"class="btn btn-warning">
   add</button><br><br>
-  <div class="container">
+  
 <table class="table ">
     <thead>
       <tr>

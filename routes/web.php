@@ -53,7 +53,7 @@ Route::get('master',[FrontController::class,'master'])->name('master');//not foo
 Route:: get('home',[FrontController::class,'home'])->name('home');
 Route:: get('about',[FrontController::class,'about'])->name('about');
 Route:: get('contact',[FrontController::class,'contact'])->name('contact');
-Route:: get('dashboard',[FrontController::class,'dashboard'])->name('dashboard');
+//Route:: get('dashboard',[FrontController::class,'dashboard'])->name('dashboard');
 
 //particular category ka record show krne ke liye below route
 Route::get('category/{id}',[FrontController::class,'view'])->name('category.view');

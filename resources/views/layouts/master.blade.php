@@ -15,7 +15,7 @@
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="#!">My First BlogProject</a>
+                <a class="navbar-brand" href="#!"> WellBlog</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
                 aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon">
@@ -36,14 +36,13 @@
             <div class="container">
                 <div class="text-center my-5">
                     <h1 class="fw-bolder">Welcome to BlogApplication </h1>
-                    <p class="lead mb-0">This is index page of my BlogApplication Project that includes different category</p>
                 </div>
             </div>
         </header>
         @yield ('content')
         <!-- Footer-->
         <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; BlogApplication 2023</p></div>
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; WelBlog 2023</p></div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
