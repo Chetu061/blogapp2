@@ -6,7 +6,7 @@
         <!-- Blog entries-->
         <div class="col-lg-8">
             <!-- Featured blog post-->
-            <div class="card mb-4">
+           {{-- <div class="card mb-4">
                 <a href="#!">
     <img class="card-img-top" src="{{asset('uploads/'.$latest->image)}}" alt="..." /></a>
                 <div class="card-body">
@@ -15,7 +15,7 @@
                     <p class="card-text">{!!$latest->description!!}</p>
                     <a class="btn btn-primary" href="{{route('detail',$latest->id)}}">Read more →</a>
                 </div>
-            </div>
+            </div> --}}
             <!-- Nested row for non-featured blog posts-->
             <div class="row">
                 @foreach ($blog as $b)
@@ -48,6 +48,7 @@
                     </div> --}}
 
                 </div>
+
                 {{-- <div class="col-lg-6">
                     <!--Blog post-->
                     <div class="card mb-4">
@@ -70,10 +71,8 @@
                         </div>
                     </div>
                 </div> --}}
-            
                 @endforeach
             </div>
-        
 
             <!-- Pagination-->
             <nav aria-label="Pagination">
@@ -106,19 +105,21 @@
                 <div class="card-header">Categories</div>
                 <div class="card-body">
                     <div class="row">
-                        @foreach($data as $d)
+                        @foreach($category as $d)
                         <div class="col-sm-6">
                             <ul class="list-unstyled mb-0">
-                                <li><a href="{{route('category.view',$d->id)}}">{{$d->name}}</a></li>                         
+                                <li><a href="#!">{{$d->name}}</a></li>
+                             
                             </ul>
-
                         </div>
                         @endforeach
-</div>
+
+                        
+                    </div>
                 </div>
             </div>
             <!-- Side widget-->
-           <!-- <div class="card mb-4">
+            <div class="card mb-4">
                 <div class="card-header">Side Widget</div>
                 <div class="card-body">
                     You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
@@ -126,7 +127,7 @@
            
          </div>
         </div>
-    </div>-->
+    </div>
 </div>  
 </div>
 @endsection

@@ -36,7 +36,7 @@
                         <!-- Post header-->
                         <header class="mb-4">
                             <!-- Post title-->
-                            <h1 class="fw-bolder mb-1">{{$blogs->title}}</h1>
+                            <h2 class="card-title h4">{{$blogs->title}}</h2>
                             <!-- Post meta content-->
                             <div class="text-muted fst-italic mb-2">{{$blogs->created_at}}</div>
                             <!-- Post categories-->
@@ -52,7 +52,7 @@
 
                         <!-- Post content-->
                         <section class="mb-5">
-                            <p class="fs-5 mb-4">{{$blogs->description}}</p>
+                            <p class="fs-5 mb-4">{!!$blogs->description!!}</p>
                         </section>
 
                     </article>
@@ -146,7 +146,7 @@
         <!-- Footer-->
         <footer class="py-5 bg-dark">
             <div class="container">
-                <p class="m-0 text-center text-white">Copyright &copy;BlogApplication 2022</p>
+                <p class="m-0 text-center text-white">Copyright &copy;BlogApplication 2023</p>
             </div>
         </footer>
         <!-- Bootstrap core JS-->

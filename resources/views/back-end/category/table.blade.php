@@ -10,6 +10,7 @@
 
 </head>
 <body>
+  <div class="container">
   <!--message code-->
   @if(session()->has('message'))
   <div class="alert alert-success">
@@ -40,6 +41,6 @@
      @endforeach
     </tbody>
   </table>
-
+</div>
 </body>
 </html>

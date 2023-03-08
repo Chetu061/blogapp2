@@ -13,4 +13,5 @@ class DetailController extends Controller
         $data=Category::paginate(3);
         return view('detail', compact('blogs','data'));
     }
+    
 }

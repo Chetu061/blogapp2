@@ -10,6 +10,7 @@
 
 </head>
 <body>
+  <div class="container">
    @if(session()->has('message'))
   <div class="alert alert-success">
     {{session()->get('message')}}
@@ -19,7 +20,7 @@
 <a href="{{route('blog.create')}}">
     <button type="button"class="btn btn-warning">
   add</button><br><br>
-  
+  <div class="container">
 <table class="table ">
     <thead>
       <tr>
@@ -39,22 +40,22 @@
         <td>{!!$d->description!!}</td>
 
          <td>
-    <img
-     src="{{asset('uploads/'.$d->image)}}"
+    <img src="{{asset('uploads/'.$d->image)}}"
    width="50px"
-   height="50px"alt=""></td>
+   height="50px"alt="not image"></td>
    
    <!--category data-->
-   <td>{{$d->category->name}}</td><!--[correct]$d->category->name-->
+   <td>{{$d->category->name}}</td>
 
 
-  <td>    
-  <button type="button" class="btn btn-light"><a href="{{route('blog.edit',$d->id)}}">Edit </a>
+  <td> 
+<button type="button" class="btn btn-light"><a href="{{route('blog.edit',$d->id)}}">Edit </a>
 <button type="button" class="btn btn-warning"><a href="{{route('blog.delete',$d->id)}}">delete</a></button>
         </td>
       </tr>
      @endforeach
     </tbody>
   </table> 
+</div>
 </body>
 </html>

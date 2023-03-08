@@ -39,34 +39,24 @@ Route::get('blog/delete/{id}',[BlogController::class,'delete'])->name('blog.dele
 
 //to show image and categoery on that page
 
-Route::get('/',[FrontController::class,'front'])->name('front');//first template
+Route::get('/',[FrontController::class,'front'])->name('*-/');//first template
 Route::get('back',[BackController::class,'back'])->name('back');//repeat for practice
 
 Route::get('detail/{id}',[DetailController::class,'detail'])->name('detail');//second template
 
 
 
+Route::get('master',[FrontController::class,'master'])->name('master');//not footer properly[master]
 
+//about,contact
 
+Route:: get('home',[FrontController::class,'home'])->name('home');
+Route:: get('about',[FrontController::class,'about'])->name('about');
+Route:: get('contact',[FrontController::class,'contact'])->name('contact');
+Route:: get('dashboard',[FrontController::class,'dashboard'])->name('dashboard');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//particular category ka record show krne ke liye below route
+Route::get('category/{id}',[FrontController::class,'view'])->name('category.view');
 
 
 
