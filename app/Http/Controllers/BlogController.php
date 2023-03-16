@@ -74,6 +74,31 @@ class BlogController extends Controller
     {
         $data = Blog::find($id);
         $data->delete();
-        return redirect()->route('blog.table')->with('message', "data deleted successfully!");
+        return redirect()->route('blog.table')->with('message', "data trashed successfully!");
     }
+
+
+
+
+    public function trash()
+    {
+        $blog=Blog::onlyTrashed()->get();
+        $data=compact('blog');
+        return view('trash')->with($data);
+    }
+
+public function restore($id)
+    {
+        $data = Blog::withTrashed()->find($id);
+        $data->restore();
+        return redirect()->route('blog.table')->with('message', "data restore successfully!");
+    }
+  
+    public function forceDelete($id){
+
+        $data=Blog::withTrashed()->find($id);
+        $data->forceDelete();
+        return redirect()->route('blog.table')->with('message', "data permanant delete  successfully!");
+       }
+
 }

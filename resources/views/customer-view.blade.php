@@ -20,10 +20,7 @@
 
 <a href="{{route('blog.create')}}">
     <button type="button"class="btn btn-warning">
-  add</button>
-  <a href="{{route('trash')}}">
-    <button type="button"class="btn btn-success">
-go to trash</button><br><br>
+  add</button><br><br>
   
 <table class="table ">
     <thead>
@@ -53,8 +50,8 @@ go to trash</button><br><br>
 
 
   <td> 
-<button type="button" class="btn btn-light"><a href="{{route('blog.edit',$d->id)}}">Edit </a>
-<button type="button" class="btn btn-warning"><a href="{{route('blog.delete',$d->id)}}">Trash</a></button>
+<button type="button" class="btn btn-light"><a href="{{route('blog.edit',$d->id)}}">Trash </a>
+<button type="button" class="btn btn-warning"><a href="{{route('blog.delete',$d->id)}}">delete</a></button>
         </td>
       </tr>
      @endforeach
