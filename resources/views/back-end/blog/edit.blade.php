@@ -54,8 +54,9 @@
                 </select>
 
             </div>
+            {{-- kavi code for particular id --}}
 
-<!--or code of dropdown-->
+<!--or  correct code of dropdown-->
             <!--<div class="form-group">
                 <label for="exampleFormControlSelect1">Example select</label>
                 <select name="category_id" id="cars">

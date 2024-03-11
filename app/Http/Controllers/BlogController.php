@@ -77,9 +77,6 @@ class BlogController extends Controller
         return redirect()->route('blog.table')->with('message', "data trashed successfully!");
     }
 
-
-
-
     public function trash()
     {
         $blog=Blog::onlyTrashed()->get();

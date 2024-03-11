@@ -9,6 +9,10 @@ use Illuminate\Http\Request;
 
 class FrontController extends Controller
 {
+    public function admin()
+    {
+        return view('admin');
+    }
  public function front()
  {
     $data=Category::all();

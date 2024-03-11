@@ -49,6 +49,7 @@ Route::get('detail/{id}',[DetailController::class,'detail'])->name('detail');//s
 Route::get('master',[FrontController::class,'master'])->name('master');//not footer properly[master]
 
 //about,contact
+Route::get('admin',[FrontController::class,'master'])->name('master');//not footer properly[master]
 
 Route:: get('home',[FrontController::class,'home'])->name('home');
 Route:: get('about',[FrontController::class,'about'])->name('about');
